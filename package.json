@@ -1,0 +1,32 @@
+{
+  "name": "college-grievance-and-feedback-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "axios": "^1.13.2",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "jspdf": "^4.0.0",
+    "jspdf-autotable": "^5.0.7",
+    "jwt-decode": "^4.0.0",
+    "mongoose": "^9.1.5",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.13",
+    "nodemon": "^3.1.11",
+    "react-icons": "^5.5.0",
+    "react-is": "^19.2.3",
+    "recharts": "^2.15.4",
+    "twilio": "^5.11.2"
+  }
+}
