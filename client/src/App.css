@@ -1,0 +1,102 @@
+/* Poori body ka background aur font set karein */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f3;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Main Container jisme saara content rahega */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings styles */
+h1, h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Login/Register aur Form ke inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Taaki padding se width na badhe */
+  font-size: 16px;
+}
+
+/* Buttons ka design */
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Dashboard specific layout */
+.main-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Mobile friendly banane ke liye */
+}
+
+.form-section, .list-section {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  min-width: 300px;
+}
+
+/* Grievance Card Design (History List) */
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid #007bff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card small {
+  color: #666;
+  font-weight: bold;
+}
+
+/* Link (Login/Register neeche wala text) */
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}

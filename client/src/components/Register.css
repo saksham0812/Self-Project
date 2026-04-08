@@ -1,0 +1,128 @@
+
+
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    /* वही सुंदर ग्रेडिएंट */
+    background: linear-gradient(-45deg, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+.register-card-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 450px; 
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.2), 
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.register-card-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.register-form-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+}
+
+.register-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.register-header p {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.styled-input {
+    width: 100%;
+    padding: 16px 20px 16px 50px; 
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    background: #f9fafb;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.styled-input:focus {
+    border-color: #667eea;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1); /* ग्लो इफेक्ट */
+}
+
+.styled-input:focus + .input-icon {
+    color: #667eea;
+}
+
+
+.styled-button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+.styled-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.5);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+
+a { transition: 0.3s; }
+a:hover { color: #5a32a3 !important; text-decoration: underline; }

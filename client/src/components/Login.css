@@ -1,0 +1,156 @@
+/* --- 1. ANIMATED BACKGROUND (Peeche chalta hua rang) --- */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    /* Modern Deep Gradient */
+    background: linear-gradient(-45deg, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite; 
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+/* --- 2. THE 3D FLOATING CARD --- */
+.login-card-wrapper {
+    display: flex;
+    width: 900px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Thoda sa transparent */
+    backdrop-filter: blur(10px); /* Glass Effect */
+    border-radius: 20px;
+    overflow: hidden;
+    /* 3D Shadow */
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.2), 
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.login-card-wrapper:hover {
+    transform: translateY(-5px); /* Mouse le jane par upar uthega */
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+/* --- LEFT SIDE (Image) --- */
+.login-left {
+    flex: 1.2;
+    background: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.login-image {
+    width: 100%;
+    max-width: 380px;
+    transition: transform 0.6s ease;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+.login-card-wrapper:hover .login-image {
+    transform: scale(1.08) rotate(-2deg); /* Image zoom effect */
+}
+
+/* --- RIGHT SIDE (Form) --- */
+.login-right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+}
+
+.login-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #777;
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+/* --- INPUTS --- */
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.styled-input {
+    width: 100%;
+    padding: 16px 20px 16px 50px;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    background: #f9fafb;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.styled-input:focus {
+    border-color: #667eea;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1); /* Blue Glow */
+}
+
+.styled-input:focus + .input-icon {
+    color: #667eea;
+}
+
+/* --- BUTTON --- */
+.styled-button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+.styled-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.5);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* --- LINK --- */
+a { transition: 0.3s; }
+a:hover { color: #5a32a3 !important; text-decoration: underline; }
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .login-card-wrapper { flex-direction: column; width: 100%; margin: 10px; }
+    .login-left { display: none; }
+    .login-right { padding: 30px; }
+}
